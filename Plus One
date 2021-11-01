@@ -1,0 +1,32 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+        
+       
+        List list = new ArrayList();
+        
+       
+        int sum=0, carry=1;
+        for(int i=digits.length-1; i>=0; i--)
+        {
+          
+                System.out.println("digit at : "+i+" ==" +digits[i]);
+            int x = carry+digits[i];
+            sum = x%10;
+            carry=x/10;
+            System.out.println("carry = "+ carry +" || sum : " +sum);
+            list.add(sum);
+            
+            //ret[i+1] =
+        }
+        if(carry>0)
+            list.add(carry);
+         int len = list.size();
+         int[] ret = new int[len];
+        for(int i=0; i<list.size();i++)
+        {
+            System.out.println("list at "+ i +" ==" +list.get(i));
+            ret[len-1-i] = (int)list.get(i);
+        }
+ return ret;
+    }
+}
